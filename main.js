@@ -19,3 +19,24 @@ function getResults(query) {
     })
     .then(displayResults);
 }
+
+function displayResults(weather) {
+  console.log(weather);
+  let city = document.querySelector(".mainbox-location-city");
+  city.innerText = `${weather.name}, ${weather.sys.country}`;
+
+  let now = new Date();
+  let date = document.querySelector(".mainbox-location-date");
+  date.innerText = dateBuilder(now);
+
+  let temp = document.querySelector(".currentbox-temp");
+  temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
+
+  let dayStatus = document.querySelector(".currentbox-weather");
+  dayStatus.innerText = weather.weather[0].main;
+
+  let hilo = document.querySelector(".currentbox-hilo");
+  hilo.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(
+    weather.main.temp_max
+  )}°c`;
+}
