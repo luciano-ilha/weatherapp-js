@@ -1,6 +1,6 @@
 # Weather App JS
 
-A weather app.
+This project is a weather app built with HTML, CSS(Sass) and JavaScript.
 
 ![Screenshot](assets/weatherapp-scshot.png)
 
