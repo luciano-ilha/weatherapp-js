@@ -6,6 +6,10 @@ This project is a weather app built with HTML, CSS(Sass) and JavaScript.
 
 ## Built With
 
+- HTML
+- CSS
+- SASS
+- JavaScript
 
 ## Live Demo
 
