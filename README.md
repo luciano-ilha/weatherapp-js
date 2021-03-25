@@ -11,7 +11,6 @@ This project is a weather app built with HTML, CSS(Sass) and JavaScript.
 - CSS
 - SASS
 - JavaScript
-- 
 
 
 ## Getting Started
