@@ -6,6 +6,8 @@ const api = {
 const searchBox = document.querySelector(".topbox-search");
 searchBox.addEventListener("keypress", setQuery);
 
+let bodyTag = document.querySelector("body");
+
 function setQuery(event) {
   if (event.keyCode == 13) {
     getResults(searchBox.value).then(displayResults);
@@ -22,19 +24,12 @@ const getResults = async (query) => {
   return weatherResponse;
 };
 
-// function getResults(query) {
-//   fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`).then(
-//     (weather) => {
-//       return weather.json();
-//     }
-//   ).then(displayResults);
-// }
-
 function displayResults(weather) {
   let city = document.querySelector(".mainbox-location-city");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
   let now = new Date();
+
   let date = document.querySelector(".mainbox-location-date");
   date.innerText = dateBuilder(now);
 
@@ -43,6 +38,20 @@ function displayResults(weather) {
 
   let dayStatus = document.querySelector(".currentbox-weather");
   dayStatus.innerText = weather.weather[0].main;
+
+  if (weather.weather[0].main == "Clear") {
+    bodyTag.style.backgroundImage = "url('/assets/sunny.jpeg')";
+  } else if (weather.weather[0].main == "Clouds") {
+    bodyTag.style.backgroundImage = "url('/assets/clouds.jpeg')";
+  } else if (weather.weather[0].main == "Rain") {
+    bodyTag.style.backgroundImage = "url('/assets/rain.jpeg')";
+  } else if (weather.weather[0].main == "Mist") {
+    bodyTag.style.backgroundImage = "url('/assets/mist.jpeg')";
+  } else if (weather.weather[0].main == "Haze") {
+    bodyTag.style.backgroundImage = "url('/assets/haze.jpeg')";
+  } else {
+    bodyTag.style.backgroundImage = "url('/assets/weather-scshot.jpg')";
+  }
 
   let hilo = document.querySelector(".currentbox-hilo");
   hilo.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(
