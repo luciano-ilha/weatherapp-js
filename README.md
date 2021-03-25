@@ -2,7 +2,7 @@
 
 A weather app.
 
-![Screenshot]()
+![Screenshot](assets/weatherapp-scshot.png)
 
 ## Built With
 
