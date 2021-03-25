@@ -4,19 +4,14 @@ This project is a weather app built with HTML, CSS(Sass) and JavaScript.
 
 ![Screenshot](assets/weatherapp-scshot.png)
 
+
 ## Built With
 
 - HTML
 - CSS
 - SASS
 - JavaScript
-
-## Live Demo
-
-[Weather App]()
-
-
-### Prerequisites
+- 
 
 
 ## Getting Started
@@ -27,8 +22,6 @@ $ git clone git@github.com:luciano-ilha/weatherapp-js.git
 ```
 
 - CD into the repository
-
-### Setup
 
 
 ### Github Actions
@@ -49,11 +42,13 @@ To make sure the linters' checks using Github Actions works properly, you should
 - Twitter: [@CarbonellIlha](https://twitter.com/CarbonellIlha )
 - Linkedin: [@Luciano Carbonell](https://www.linkedin.com/in/luciano-carbonell/)
 
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
 Feel free to check the fork this repo and create pull request if you want to make changes.
+
 
 ## Show your support :muscle:
 
