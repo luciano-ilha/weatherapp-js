@@ -1,3 +1,5 @@
+import "./style.scss";
+
 const api = {
   key: "506cbac2b3ba4e29e7a6542e49fa22bb",
   base: "https://api.openweathermap.org/data/2.5/",
@@ -7,6 +9,7 @@ const searchBox = document.querySelector(".topbox-search");
 searchBox.addEventListener("keypress", setQuery);
 
 let bodyTag = document.querySelector("body");
+bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpg')";
 
 function setQuery(event) {
   if (event.keyCode == 13) {
