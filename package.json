@@ -1,0 +1,24 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "A weather app, which allows the user to search for a specific location and get it's temperature, hi-lo temperatures and present date, displayed back.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luciano-ilha/weatherapp-js.git"
+  },
+  "author": "Luciano Ilha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luciano-ilha/weatherapp-js/issues"
+  },
+  "homepage": "https://github.com/luciano-ilha/weatherapp-js#readme",
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0"
+  }
+}
