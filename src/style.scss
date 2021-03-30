@@ -1,7 +1,12 @@
 body {
   font-family: "montserrat", sans-serif;
   background-size: cover;
-  background-position: top center;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .app-wrap {
@@ -72,7 +77,7 @@ body {
     margin: 30px 0;
     text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
 
-    span {
+    &-unit {
       font-weight: 500;
     }
   }

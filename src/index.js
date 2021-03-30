@@ -5,8 +5,10 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
-let bodyTag = document.querySelector("body");
+const bodyTag = document.querySelector("body");
 bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpeg')";
+
+const tempUnit = document.querySelector(".currentbox-temp-unit");
 
 const setQuery = (event) => {
   if (event.keyCode == 13) {
@@ -28,6 +30,7 @@ const getResults = async (query) => {
 };
 
 const displayResults = (weather) => {
+  console.log(weather);
   let city = document.querySelector(".mainbox-location-city");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
@@ -37,7 +40,9 @@ const displayResults = (weather) => {
   date.innerText = dateBuilder(now);
 
   let temp = document.querySelector(".currentbox-temp");
-  temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`;
+  temp.innerHTML = `${Math.round(
+    weather.main.temp
+  )}<span class="currentbox-temp-unit">°c</span>`;
 
   let dayStatus = document.querySelector(".currentbox-weather");
   dayStatus.innerText = weather.weather[0].main;
