@@ -5,17 +5,17 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
-const searchBox = document.querySelector(".topbox-search");
-searchBox.addEventListener("keypress", setQuery);
-
 let bodyTag = document.querySelector("body");
 bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpg')";
 
-function setQuery(event) {
+const setQuery = (event) => {
   if (event.keyCode == 13) {
     getResults(searchBox.value).then(displayResults);
   }
-}
+};
+
+const searchBox = document.querySelector(".topbox-search");
+searchBox.addEventListener("keypress", setQuery);
 
 const getResults = async (query) => {
   const queryResult = await fetch(
@@ -27,7 +27,7 @@ const getResults = async (query) => {
   return weatherResponse;
 };
 
-function displayResults(weather) {
+const displayResults = (weather) => {
   let city = document.querySelector(".mainbox-location-city");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
@@ -60,9 +60,9 @@ function displayResults(weather) {
   hilo.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(
     weather.main.temp_max
   )}°c`;
-}
+};
 
-function dateBuilder(d) {
+const dateBuilder = (d) => {
   let months = [
     "January",
     "February",
@@ -94,4 +94,4 @@ function dateBuilder(d) {
   let year = d.getFullYear();
 
   return `${day}, ${date} ${month} - ${year}`;
-}
+};
