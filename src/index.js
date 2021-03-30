@@ -42,7 +42,7 @@ const displayResults = (weather) => {
   let temp = document.querySelector(".currentbox-temp");
   temp.innerHTML = `${Math.round(
     weather.main.temp
-  )}<span class="currentbox-temp-unit">°c</span>`;
+  )}<span class="currentbox-temp-unit">°c</span><span class="currentbox-temp-toggle">Farenheit</span>`;
 
   let dayStatus = document.querySelector(".currentbox-weather");
   dayStatus.innerText = weather.weather[0].main;

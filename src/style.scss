@@ -57,14 +57,15 @@ body {
   &-location {
     &-city {
       color: #fff;
-      font-size: 32px;
+      font-size: 40px;
       font-weight: 500;
       margin-bottom: 5px;
     }
 
     &-date {
       color: #fff;
-      font-size: 16px;
+      font-size: 23px;
+      margin-top: 10px;
     }
   }
 }
@@ -79,6 +80,31 @@ body {
 
     &-unit {
       font-weight: 500;
+    }
+
+    &-toggle {
+      font-size: 20px;
+      color: rgb(54, 54, 54);
+      background-color: #f7a519;
+      text-shadow: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-left: 30px;
+      &:hover {
+        cursor: pointer;
+        animation: color-change 0.4s infinite;
+        @keyframes color-change {
+          0% {
+            color: rgb(231, 231, 231);
+          }
+          50% {
+            color: rgb(54, 54, 54);
+          }
+          100% {
+            color: rgb(231, 231, 231);
+          }
+        }
+      }
     }
   }
 
