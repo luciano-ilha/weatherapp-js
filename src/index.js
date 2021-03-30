@@ -6,7 +6,7 @@ const api = {
 };
 
 let bodyTag = document.querySelector("body");
-bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpg')";
+bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpeg')";
 
 const setQuery = (event) => {
   if (event.keyCode == 13) {
@@ -53,7 +53,7 @@ const displayResults = (weather) => {
   } else if (weather.weather[0].main == "Haze") {
     bodyTag.style.backgroundImage = "url('/assets/haze.jpeg')";
   } else {
-    bodyTag.style.backgroundImage = "url('/assets/weather-scshot.jpg')";
+    bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpeg')";
   }
 
   let hilo = document.querySelector(".currentbox-hilo");
