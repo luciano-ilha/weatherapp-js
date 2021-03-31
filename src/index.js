@@ -16,39 +16,25 @@ const hiloLounit = document.querySelector(".currentbox-hilo-lounit");
 const hiloHivalue = document.querySelector(".currentbox-hilo-hivalue");
 const hiloHiunit = document.querySelector(".currentbox-hilo-hiunit");
 
-const tempUnitChanger = () => {
-  if (displayUnit.innerText == "°c") {
-    temp.innerText = `${(temp.innerText * 9) / 5 + 32}`;
-    displayUnit.innerText = "°f";
-    tempUnit.innerText = "Celsius";
-    hiloLovalue.innerText = `${Math.round(
-      (hiloLovalue.innerText * 9) / 5 + 32
-    )}`;
-    hiloLounit.innerText = "°f /";
-    hiloHivalue.innerText = `${Math.round(
-      (hiloHivalue.innerText * 9) / 5 + 32
-    )}`;
-    hiloHiunit.innerText = "°f";
-  } else {
-    temp.innerHTML = `${Math.round(((temp.innerText - 32) * 5) / 9)}`;
-    displayUnit.innerText = "°c";
-    tempUnit.innerText = "Farenheit";
-    hiloLovalue.innerText = `${Math.round(
-      ((hiloLovalue.innerText - 32) * 5) / 9
-    )}`;
-    hiloLounit.innerText = "°c /";
-    hiloHivalue.innerText = `${Math.round(
-      ((hiloHivalue.innerText - 32) * 5) / 9
-    )}`;
-    hiloHiunit.innerText = "°c";
-  }
-};
-
-tempUnit.addEventListener("click", tempUnitChanger);
-
 const setQuery = (event) => {
   if (event.keyCode == 13) {
-    getResults(searchBox.value).then(displayResults);
+    getResults(searchBox.value)
+      .then(displayResults)
+      .catch((err) => {
+        let errMsg = document.querySelector(".mainbox-location-city");
+        errMsg.innerText = `${err}`;
+        let errDate = document.querySelector(".mainbox-location-date");
+        errDate.innerText = "";
+        temp.innerText = "";
+        displayUnit.innerText = "";
+        let errSky = document.querySelector(".currentbox-weather");
+        errSky.innerText = "";
+        hiloLovalue.innerText = "";
+        hiloLounit.innerText = "";
+        hiloHivalue.innerText = "";
+        hiloHiunit.innerText = "";
+        searchBox.value = "";
+      });
   }
 };
 
@@ -60,13 +46,16 @@ const getResults = async (query) => {
     `${api.base}weather?q=${query}&units=metric&APPID=${api.key}`
   );
 
+  if (queryResult.status !== 200) {
+    throw new Error("Oooops! Sorry, city not found! Please try again.");
+  }
+
   const weatherResponse = await queryResult.json();
 
   return weatherResponse;
 };
 
 const displayResults = (weather) => {
-  console.log(weather);
   let city = document.querySelector(".mainbox-location-city");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
@@ -142,3 +131,33 @@ const dateBuilder = (d) => {
 
   return `${day}, ${date} ${month} - ${year}`;
 };
+
+const tempUnitChanger = () => {
+  if (displayUnit.innerText == "°c") {
+    temp.innerText = `${(temp.innerText * 9) / 5 + 32}`;
+    displayUnit.innerText = "°f";
+    tempUnit.innerText = "Celsius";
+    hiloLovalue.innerText = `${Math.round(
+      (hiloLovalue.innerText * 9) / 5 + 32
+    )}`;
+    hiloLounit.innerText = "°f /";
+    hiloHivalue.innerText = `${Math.round(
+      (hiloHivalue.innerText * 9) / 5 + 32
+    )}`;
+    hiloHiunit.innerText = "°f";
+  } else {
+    temp.innerHTML = `${Math.round(((temp.innerText - 32) * 5) / 9)}`;
+    displayUnit.innerText = "°c";
+    tempUnit.innerText = "Farenheit";
+    hiloLovalue.innerText = `${Math.round(
+      ((hiloLovalue.innerText - 32) * 5) / 9
+    )}`;
+    hiloLounit.innerText = "°c /";
+    hiloHivalue.innerText = `${Math.round(
+      ((hiloHivalue.innerText - 32) * 5) / 9
+    )}`;
+    hiloHiunit.innerText = "°c";
+  }
+};
+
+tempUnit.addEventListener("click", tempUnitChanger);
