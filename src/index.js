@@ -26,13 +26,10 @@ const setQuery = (event) => {
         let errDate = document.querySelector(".mainbox-location-date");
         errDate.innerText = "";
         temp.innerText = "";
-        displayUnit.innerText = "";
         let errSky = document.querySelector(".currentbox-weather");
         errSky.innerText = "";
         hiloLovalue.innerText = "";
-        hiloLounit.innerText = "";
         hiloHivalue.innerText = "";
-        hiloHiunit.innerText = "";
         searchBox.value = "";
       });
   }
