@@ -7,5 +7,6 @@
   "parserOptions": {
     "ecmaVersion": 2018
   },
-  "rules": {}
+  "rules": {},
+  "ignorePatterns": ["dist/", "webpack.config.js"]
 }
