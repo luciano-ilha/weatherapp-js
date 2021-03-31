@@ -20,6 +20,8 @@ $ git clone git@github.com:luciano-ilha/weatherapp-js.git
 ```
 
 - CD into the repository
+- Run `npm install`
+- Run `npm start`
 
 ### Github Actions
 
