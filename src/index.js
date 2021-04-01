@@ -1,20 +1,20 @@
 import "./style.scss";
-
-const api = {
-  key: "506cbac2b3ba4e29e7a6542e49fa22bb",
-  base: "https://api.openweathermap.org/data/2.5/",
-};
-
-const bodyTag = document.querySelector("body");
-bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpeg')";
-
-const temp = document.querySelector(".currentbox-temp-value");
-const displayUnit = document.querySelector(".currentbox-temp-unit");
-const tempUnit = document.querySelector(".currentbox-temp-toggle");
-const hiloLovalue = document.querySelector(".currentbox-hilo-lovalue");
-const hiloLounit = document.querySelector(".currentbox-hilo-lounit");
-const hiloHivalue = document.querySelector(".currentbox-hilo-hivalue");
-const hiloHiunit = document.querySelector(".currentbox-hilo-hiunit");
+import {
+  api,
+  bodyTag,
+  temp,
+  displayUnit,
+  tempUnit,
+  hiloLovalue,
+  hiloLounit,
+  hiloHivalue,
+  hiloHiunit,
+  searchBox,
+  city,
+  now,
+  date,
+  dayStatus,
+} from "./utils";
 
 const setQuery = (event) => {
   if (event.keyCode == 13) {
@@ -35,7 +35,6 @@ const setQuery = (event) => {
   }
 };
 
-const searchBox = document.querySelector(".topbox-search");
 searchBox.addEventListener("keypress", setQuery);
 
 const getResults = async (query) => {
@@ -53,12 +52,8 @@ const getResults = async (query) => {
 };
 
 const displayResults = (weather) => {
-  let city = document.querySelector(".mainbox-location-city");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
-  let now = new Date();
-
-  let date = document.querySelector(".mainbox-location-date");
   date.innerText = dateBuilder(now);
 
   if (displayUnit.innerText == "°c") {
@@ -75,7 +70,6 @@ const displayResults = (weather) => {
     )}`;
   }
 
-  let dayStatus = document.querySelector(".currentbox-weather");
   dayStatus.innerText = weather.weather[0].main;
 
   if (weather.weather[0].main == "Clear") {
