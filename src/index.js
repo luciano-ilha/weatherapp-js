@@ -10,6 +10,9 @@ import {
   hiloHivalue,
   hiloHiunit,
   searchBox,
+  errMsg,
+  errDate,
+  errSky,
   city,
   now,
   date,
@@ -21,12 +24,9 @@ const setQuery = (event) => {
     getResults(searchBox.value)
       .then(displayResults)
       .catch((err) => {
-        let errMsg = document.querySelector(".mainbox-location-city");
         errMsg.innerText = `${err}`;
-        let errDate = document.querySelector(".mainbox-location-date");
         errDate.innerText = "";
         temp.innerText = "";
-        let errSky = document.querySelector(".currentbox-weather");
         errSky.innerText = "";
         hiloLovalue.innerText = "";
         hiloHivalue.innerText = "";

@@ -14,6 +14,9 @@ const hiloLounit = document.querySelector(".currentbox-hilo-lounit");
 const hiloHivalue = document.querySelector(".currentbox-hilo-hivalue");
 const hiloHiunit = document.querySelector(".currentbox-hilo-hiunit");
 const searchBox = document.querySelector(".topbox-search");
+const errMsg = document.querySelector(".mainbox-location-city");
+const errDate = document.querySelector(".mainbox-location-date");
+const errSky = document.querySelector(".currentbox-weather");
 const city = document.querySelector(".mainbox-location-city");
 const now = new Date();
 const date = document.querySelector(".mainbox-location-date");
@@ -30,6 +33,9 @@ export {
   hiloHivalue,
   hiloHiunit,
   searchBox,
+  errMsg,
+  errDate,
+  errSky,
   city,
   now,
   date,
