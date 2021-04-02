@@ -20,7 +20,7 @@ const errSky = document.querySelector(".currentbox-weather");
 const city = document.querySelector(".mainbox-location-city");
 const now = new Date();
 const date = document.querySelector(".mainbox-location-date");
-let dayStatus = document.querySelector(".currentbox-weather");
+const dayStatus = document.querySelector(".currentbox-weather");
 
 export {
   api,
