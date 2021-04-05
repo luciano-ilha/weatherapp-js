@@ -7,10 +7,7 @@ This project is a weather app built with HTML, CSS(Sass) and JavaScript.
 
 # Live Demo #
 
-[Live Demo Link](https://rawcdn.githack.com/luciano-ilha/weatherapp-js/aee50c24396a2a97894dc6541847bb58963a5a60/dist/index.html)
-
-
-** Live demo is working without the images, please run the project locally to properly see the background changing with the search results.
+[Live Demo Link](https://rawcdn.githack.com/luciano-ilha/weatherapp-js/26e77c8a2b1b52313412a15085441cd6df9491a9/dist/index.html)
 
 
 ## Built With
