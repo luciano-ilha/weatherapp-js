@@ -19,6 +19,8 @@ import {
   dayStatus,
 } from "./utils";
 
+bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpeg')";
+
 const setQuery = (event) => {
   if (event.keyCode == 13) {
     getResults(searchBox.value)

@@ -4,8 +4,6 @@ const api = {
 };
 
 const bodyTag = document.querySelector("body");
-bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpeg')";
-
 const temp = document.querySelector(".currentbox-temp-value");
 const displayUnit = document.querySelector(".currentbox-temp-unit");
 const tempUnit = document.querySelector(".currentbox-temp-toggle");
