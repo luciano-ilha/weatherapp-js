@@ -1,4 +1,10 @@
 import "./style.scss";
+import bgImg from "../assets/weatherscshot.jpeg";
+import bgClear from "../assets/sunny.jpeg";
+import bgClouds from "../assets/clouds.jpeg";
+import bgRain from "../assets/rain.jpeg";
+import bgMist from "../assets/mist.jpeg";
+import bgHaze from "../assets/haze.jpeg";
 import {
   api,
   bodyTag,
@@ -19,7 +25,7 @@ import {
   dayStatus,
 } from "./utils";
 
-bodyTag.style.backgroundImage = "url('./assets/weatherscshot.jpeg')";
+bodyTag.style.backgroundImage = `url(${bgImg})`;
 
 const setQuery = (event) => {
   if (event.keyCode == 13) {
@@ -75,17 +81,17 @@ const displayResults = (weather) => {
   dayStatus.innerText = weather.weather[0].main;
 
   if (weather.weather[0].main == "Clear") {
-    bodyTag.style.backgroundImage = "url('./assets/sunny.jpeg')";
+    bodyTag.style.backgroundImage = `url(${bgClear})`;
   } else if (weather.weather[0].main == "Clouds") {
-    bodyTag.style.backgroundImage = "url('./assets/clouds.jpeg')";
+    bodyTag.style.backgroundImage = `url(${bgClouds})`;
   } else if (weather.weather[0].main == "Rain") {
-    bodyTag.style.backgroundImage = "url('./assets/rain.jpeg')";
+    bodyTag.style.backgroundImage = `url(${bgRain})`;
   } else if (weather.weather[0].main == "Mist") {
-    bodyTag.style.backgroundImage = "url('./assets/mist.jpeg')";
+    bodyTag.style.backgroundImage = `url(${bgMist})`;
   } else if (weather.weather[0].main == "Haze") {
-    bodyTag.style.backgroundImage = "url('./assets/haze.jpeg')";
+    bodyTag.style.backgroundImage = `url(${bgHaze})`;
   } else {
-    bodyTag.style.backgroundImage = "url('./assets/weatherscshot.jpeg')";
+    bodyTag.style.backgroundImage = `url(${bgImg})`;
   }
 
   searchBox.value = "";
