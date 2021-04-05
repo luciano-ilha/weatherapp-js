@@ -19,7 +19,7 @@ import {
   dayStatus,
 } from "./utils";
 
-bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpeg')";
+bodyTag.style.backgroundImage = "url('./assets/weatherscshot.jpeg')";
 
 const setQuery = (event) => {
   if (event.keyCode == 13) {
@@ -75,17 +75,17 @@ const displayResults = (weather) => {
   dayStatus.innerText = weather.weather[0].main;
 
   if (weather.weather[0].main == "Clear") {
-    bodyTag.style.backgroundImage = "url('/assets/sunny.jpeg')";
+    bodyTag.style.backgroundImage = "url('./assets/sunny.jpeg')";
   } else if (weather.weather[0].main == "Clouds") {
-    bodyTag.style.backgroundImage = "url('/assets/clouds.jpeg')";
+    bodyTag.style.backgroundImage = "url('./assets/clouds.jpeg')";
   } else if (weather.weather[0].main == "Rain") {
-    bodyTag.style.backgroundImage = "url('/assets/rain.jpeg')";
+    bodyTag.style.backgroundImage = "url('./assets/rain.jpeg')";
   } else if (weather.weather[0].main == "Mist") {
-    bodyTag.style.backgroundImage = "url('/assets/mist.jpeg')";
+    bodyTag.style.backgroundImage = "url('./assets/mist.jpeg')";
   } else if (weather.weather[0].main == "Haze") {
-    bodyTag.style.backgroundImage = "url('/assets/haze.jpeg')";
+    bodyTag.style.backgroundImage = "url('./assets/haze.jpeg')";
   } else {
-    bodyTag.style.backgroundImage = "url('/assets/weatherscshot.jpeg')";
+    bodyTag.style.backgroundImage = "url('./assets/weatherscshot.jpeg')";
   }
 
   searchBox.value = "";
