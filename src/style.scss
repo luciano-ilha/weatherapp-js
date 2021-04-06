@@ -1,0 +1,133 @@
+body {
+  font-family: "montserrat", sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.5)
+    );
+}
+
+.topbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px 15px;
+  margin-top: 60px;
+
+  &-search {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 16px 0 16px 9px;
+    border-bottom: 3px solid #df8e00;
+    color: #313131;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+    box-shadow: 0 0 38px 4px rgba(0, 0, 0, 0.8);
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+.mainbox {
+  flex: 1 1 100%;
+  padding: 25px 25px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &-location {
+    &-city {
+      color: #fff;
+      font-size: 60px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    &-date {
+      color: #fff;
+      font-size: 28px;
+      margin-top: 8px;
+    }
+  }
+}
+
+.currentbox {
+  &-temp {
+    color: #fff;
+    font-size: 110px;
+    font-weight: 900;
+    margin: 30px 0;
+    text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+
+    &-unit {
+      font-weight: 500;
+    }
+
+    &-toggle {
+      font-size: 20px;
+      color: rgb(54, 54, 54);
+      background-color: #f7a519;
+      text-shadow: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-left: 30px;
+
+      &:hover {
+        cursor: pointer;
+        animation: color-change 0.4s infinite;
+
+        @keyframes color-change {
+          0% {
+            color: rgb(231, 231, 231);
+          }
+
+          50% {
+            color: rgb(54, 54, 54);
+          }
+
+          100% {
+            color: rgb(231, 231, 231);
+          }
+        }
+      }
+    }
+  }
+
+  &-weather {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-shadow: 0 3px rgba(0, 0, 0, 0.4);
+  }
+
+  &-hilo {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    text-shadow: 0 3px rgba(0, 0, 0, 0.4);
+  }
+}

@@ -1,31 +1,33 @@
 # Weather App JS
 
-A weather app.
+This project is a weather app built with HTML, CSS(Sass) and JavaScript.
 
-![Screenshot]()
+![Screenshot](assets/weatherappscshot.png)
+
+
+# Live Demo #
+
+[Live Demo Link](https://rawcdn.githack.com/luciano-ilha/weatherapp-js/d297cbb5a16ad3848530cbe23b69e822fdb35a0a/dist/index.html)
+
 
 ## Built With
 
-
-## Live Demo
-
-[Weather App]()
-
-
-### Prerequisites
-
+- HTML
+- CSS
+- SASS
+- JavaScript
 
 ## Getting Started
 
 - First get a local copy of the project by forking it or just clone it typing this at your terminal inside your favorite folder:
+
 ```
 $ git clone git@github.com:luciano-ilha/weatherapp-js.git
 ```
 
 - CD into the repository
-
-### Setup
-
+- Run `npm install`
+- Run `npm start`
 
 ### Github Actions
 
@@ -36,13 +38,12 @@ To make sure the linters' checks using Github Actions works properly, you should
 3. Start working on your milestone as usual.
 4. Open a PR from the `feature/branch` when your work is done.
 
-
 ## ✒️ Authors <a name = "author"></a>
 
 👤 **Luciano Ilha Carbonel**
 
 - Github: [@Luciano Ilha](https://github.com/luciano-ilha)
-- Twitter: [@CarbonellIlha](https://twitter.com/CarbonellIlha )
+- Twitter: [@CarbonellIlha](https://twitter.com/CarbonellIlha)
 - Linkedin: [@Luciano Carbonell](https://www.linkedin.com/in/luciano-carbonell/)
 
 ## 🤝 Contributing
@@ -57,5 +58,5 @@ Give a ⭐️ if you like this project!
 
 ## :thumbsup: Acknowledgements
 
-- Microverse  
+- Microverse
 - ThOdinProject
