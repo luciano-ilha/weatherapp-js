@@ -1,6 +1,6 @@
 # Weather App JS
 
-This project is a weather app built with HTML, CSS(Sass) and JavaScript.
+A weather app that pulls from the OpenWeatherMap API to allow users to search for and view the forecast in cities worldwide. Built with HTML, CSS(Sass) and JavaScript.
 
 ![Screenshot](assets/weatherappscshot.png)
 
