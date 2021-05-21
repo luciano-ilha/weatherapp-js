@@ -7,7 +7,7 @@ A weather app that pulls from the OpenWeatherMap API to allow users to search fo
 
 # Live Demo #
 
-[Live Demo Link](https://rawcdn.githack.com/luciano-ilha/weatherapp-js/d297cbb5a16ad3848530cbe23b69e822fdb35a0a/dist/index.html)
+[Live Demo Link](https://fervent-kilby-d2888c.netlify.app/)
 
 
 ## Built With
